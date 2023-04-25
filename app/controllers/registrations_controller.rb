@@ -4,4 +4,8 @@ class RegistrationsController < ApplicationController
         @user = User.new
     end
 
+    def create
+        render plain: "Thanks"
+    end
+
 end
