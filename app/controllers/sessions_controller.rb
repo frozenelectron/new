@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
     end
 
     def create
+        byebug
         Current.user = User.find_by(email: params[:email])
         if Current.user.present? && Current.user.authenticate(params[:password])
             session[:user_id] = Current.user.id
